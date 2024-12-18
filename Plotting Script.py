@@ -4,7 +4,14 @@ Created on Tue Dec 17 10:57:09 2024
 
 @author: ander
 """
- 
+#Purpose Statement
+"""
+This script is designed to visualize the variation of δ18O values at different distances away from an intrusive bode. 
+It compares the δ18O values calculated at various distances with the observed 
+ranges of δ18O values in garnet cores and rims. Inputs are the preexisting garnet 
+dataset and the outputs are the results of the temperature determined by the 
+delta 18 O values calculator
+""" 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -40,15 +47,16 @@ ax1.plot([3000]*len(d18Ocalc3km), d18Ocalc3km, 'o', label='3 km')
 ax1.plot([4000]*len(d18Ocalc4km), d18Ocalc4km, 'o', label='4 km')
 ax1.plot([5000]*len(d18Ocalc5km), d18Ocalc5km, 'o', label='5 km')
 
-ax1.axhspan(min(data_rims), max(data_rims), color='red', alpha=0.3, label='Rim Range')
-ax1.axhspan(min(data_cores), max(data_cores), color='blue', alpha=0.3, label='Core Range')
+ax1.axhspan(min(data_rims), max(data_rims), color='red', alpha=0.3, label='Rim Range')  #Plots range of garnet rims in red, alpha creates shaded red color 
+ax1.axhspan(min(data_cores), max(data_cores), color='blue', alpha=0.3, label='Core Range') #Plots range of garnet rims in blue, alpha creates shaded blue color 
 
  
-plt.ylim(-8, 17)
-plt.ylabel('d18O')
-plt.xlabel('distance (m)')
-plt.title('d18O values vs Distance')
-plt.legend(loc='upper left')
-plt.grid(True)
-plt.show()
+plt.ylim(-8, 17)  # set the y-axis limits
+plt.ylabel('d18O') # label for the y-axis
+plt.xlabel('distance (m)') # label for the x-axis
+plt.title('d18O values vs Distance') # title of the plot
+plt.legend(loc='upper left') #display the legend in the upper left corner
+plt.grid(True) # enable the grid
+plt.show()  # display plot
+
 
