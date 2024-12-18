@@ -4,6 +4,18 @@ Created on Mon Dec 16 22:58:22 2024
 
 @author: ander
 """
+#Purpose Statement
+"""
+This script simulates the heat diffusion process in a one-dimensional domain
+over a specified period. It models the temperature distribution in the ground, 
+considering an intrusive body with a significantly higher temperature at one
+end of the domain. The script uses the explicit finite difference method to 
+solve the heat equation, ensuring numerical stability through a stability 
+criterion. Inputs are the diffusion rate, length of domain, total time, 
+and initial temperature. Outputs are the temperature distribution which 
+is plotted. The final temperature distribution is plotted to visualize the 
+effect of heat diffusion over time. 
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
