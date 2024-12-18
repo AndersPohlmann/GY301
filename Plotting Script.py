@@ -32,6 +32,8 @@ file_rims = 'Garnet Rims.txt'
 data_rims = np.genfromtxt(file_rims)
 print(data_rims) #ensure dataset has been properly loaded
 
+##dataset source: D18O Values calculated at University of New Mexico Center for Stable Isotopes, not published in paper as of time model was created
+
 # d18O values for different distances
 d18Ocalc1km = np.array([-7.968085163, -6.656253902, -5.345183369, -4.034872902, -2.72532184, -1.416529523, -0.108495292, 1.198781512, 2.505301546, 3.811065466, 5.116073931])
 d18Ocalc2km = np.array([-7.968085163, -6.655923666, -5.344522216, -4.033880154, -2.723996819, -1.414871553, -0.106503698, 1.201107403, 2.507962406, 3.814061967, 5.119406741])
